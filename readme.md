@@ -41,7 +41,7 @@ print(cfg)
 ## Individual
 
 ```python
-print(config['pca_params'])
+print(cfg['pca-params'])
 
 #'n_components': 224
 ```
