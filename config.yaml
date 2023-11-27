@@ -1,9 +1,9 @@
 maintainer: Mert Cobanov
 
-pca-params:
-  n-components: 224
+pca_params:
+  n_components: 224
 
-umap-params:
+umap_params:
   min_dist:
     - 0.01
     - 0.1
@@ -15,5 +15,5 @@ umap-params:
     - manhattan
     - chebyshev
 
-visualiz-params:
-  median-threshold: 6
+visualize_params:
+  median_threshold: 6
