@@ -5,7 +5,7 @@ with open("config.yaml") as f:
     cfg = yaml.load(f, Loader=yaml.FullLoader)
 
 
-pprint(cfg["pca-params"])
+pprint(cfg["pca_params"])
 
 cfg["n_components"] = 0.2
 cfg["umap_params"]["metrics"].append("chebyshev")
