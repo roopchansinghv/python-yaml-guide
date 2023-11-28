@@ -1,6 +1,6 @@
 # Python YAML Configuration Guide
 
-YAML (YAML Ain't Markup Language) is a human-readable data serialization format that is commonly used for configuration files and data exchange between programming languages. Python has built-in support for parsing YAML files using the yaml module, which provides functions for reading and writing YAML data.
+YAML *(YAML Ain't Markup Language)* is a human-readable data serialization format that is commonly used for configuration files and data exchange between programming languages. Python has built-in support for parsing YAML files using the yaml module, which provides functions for reading and writing YAML data.
 
 ## Install and Import YAML
 
@@ -32,7 +32,7 @@ print(cfg)
 ```python
 {'maintainer': 'Mert Cobanov',
  'pca_params': {'n_components': 224},
- 'umap_params': {'metrics': ['euclidean', 'l1', 'manhattan', 'chebyshev'],
+ 'umap_params': {'metrics': ['euclidean', 'l1', 'manhattan'],
                  'min_dist': [0.01, 0.1, 0.5],
                  'spread': 1.0},
  'visualize_params': {'median_threshold': 6}}
@@ -41,11 +41,10 @@ print(cfg)
 ## Individual
 
 ```python
-print(cfg['pca-params'])
+print(cfg['pca_params'])
 
-#'n_components': 224
+# 'n_components': 224
 ```
-
 
 ## Updating YAML with Python
 
@@ -65,4 +64,6 @@ with open("config.yaml", "w") as f:
     )
 ```
 
-It's important to note that the yaml.dump() function will overwrite the entire contents of the file, so you should be careful to include all of the data that you want to keep in the updated file. If you only want to update a specific section of the YAML data, you can modify just that section in memory and then write the entire data structure back to the file.
+> It's important to note that the `yaml.dump()` function will overwrite the entire contents of the file, so you should be careful to include all of the data that you want to keep in the updated file.
+
+If you only want to update a specific section of the YAML data, you can modify just that section in memory and then write the entire data structure back to the file.
